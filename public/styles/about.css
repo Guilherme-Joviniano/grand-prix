@@ -1,0 +1,108 @@
+@keyframes arrow-down {
+    0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(50px);
+      }
+      100% {
+          transform: translateY(0px);
+      }
+
+}
+main {
+    display: block;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title .icon-watering {
+    display: flex;
+    align-items: center;
+    background: url('../imgs/icon-plant-watering.png');
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+}
+.title {
+    position: relative;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    margin: 0 auto;
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    color: #643D14;
+}
+.banner {
+    margin-top: -120px;
+    background: url('../imgs/banner.png');
+    width: 287px;
+    height: 500px;
+}
+.arrow-down {
+    transform: translateY(50px);
+    position: relative;
+    animation: arrow-down 1.2s infinite  linear;
+    left: 50%;
+    background: url('../imgs/arrow-down.png');
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 60px;
+}
+.our-history {
+    margin-top: 100px;
+}
+
+.decoreter {
+    width: 195px;
+    height: 30px;
+    background: url('../imgs/title-decorator.png');
+
+}
+.decoreter-right {
+    background: url('../imgs/tiltle-decorator-2.png')
+}
+.decoreter:nth-child(0) {
+    transform: rotate(90deg);
+}
+.title-gradient {
+    background: linear-gradient(90.03deg, #B17151 0.03%, rgba(196, 117, 41, 0.5) 99.97%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.container-content {
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.container-content .scroller-image {
+    width: 470px;
+    height: 470px;
+    background: url('../imgs/scroll-image.png');
+    background-size: cover;
+    border: 3px solid #C47529;
+
+}
+
+.container-content .paragraph {
+    width: 540px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+}   
