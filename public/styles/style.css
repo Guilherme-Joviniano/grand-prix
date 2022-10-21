@@ -294,6 +294,7 @@ header nav .logo-header {
 }
 
 footer {
+    margin-top: 100px;
     width: 100vw;
     display: flex;
     flex-direction: column;
