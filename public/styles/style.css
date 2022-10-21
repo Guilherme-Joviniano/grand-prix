@@ -12,6 +12,7 @@ a {
     text-decoration: none;
     color: #643D14;
 }
+
 .title .icon-watering {
     display: flex;
     align-items: center;
@@ -236,6 +237,7 @@ header nav .logo-header {
     margin-top: 0px;
     right: 100px;
 }
+
 .picture {
     cursor: pointer;
     width: 50px;
@@ -245,6 +247,7 @@ header nav .logo-header {
     background: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
     background-size: cover;
 }
+
 .user-menu {
     position: absolute;
     display: none;
@@ -256,16 +259,18 @@ header nav .logo-header {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
 }
+
 .user-menu div h2 {
     font-family: 'Source Serif 4';
     display: flex;
     gap: 20px;
 }
+
 .auth:hover {
     display: flex;
 }
 
-.profile-picture:hover .user-menu  {
+.profile-picture:hover .user-menu {
     display: flex;
 }
 
@@ -311,12 +316,13 @@ footer .email {
 }
 
 
-.social-media{
+.social-media {
     z-index: 99;
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .icons {
     display: flex;
     align-items: center;
@@ -347,6 +353,7 @@ input {
     background-color: transparent;
     border: 3px solid #C47529;
 }
+
 textarea {
     padding: 10px;
     font-family: 'Montserrat';
@@ -355,3 +362,108 @@ textarea {
     background: transparent;
     border: 3px solid #C47529;
 }
+
+.chatbot {
+    z-index: 99;
+    cursor: pointer;
+    position: fixed;
+    right: 0px;
+    bottom: 256px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+    width: 250px;
+    height: 50px;
+    background: #D6C89D;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.message {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    margin-top: -40px;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.message img {
+
+    width: 140px;
+    height: 50px;
+
+}
+
+.message-text {
+    overflow: hidden;
+    width: 300px;
+    height: 107px;
+    font-family: 'Source Serif 4';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 0px 16px;
+}
+
+.chatbot h3 {
+    font-family: 'Source Serif 4';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+
+    color: #000000;
+
+}
+
+.chatbot img {
+    margin-left: 20px;
+    height: 40px;
+}
+
+.chatbody {
+    cursor: pointer;
+    position: fixed;
+    right: 0px;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+    width: 250px;
+    height: 256px;
+    background: #F0DFA7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.send-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background: #D6C89D
+}
+.send-message input {
+    background: #FFF;
+    border: none;
+    border-radius: 16px;
+}
+.send-message i{
+    position: absolute;
+    right: 20px;
+    color: #367FD4;
+}
+
+.hide { display: none;}
+
