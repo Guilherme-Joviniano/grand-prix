@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz@8..60&display=swap');
 
 * {
     margin: 0;
@@ -6,21 +7,95 @@
     box-sizing: border-box;
     overflow-x: hidden;
 }
+
 a {
     text-decoration: none;
-    color: #FFF;
+    color: #643D14;
 }
-body, html {
+.title .icon-watering {
+    display: flex;
+    align-items: center;
+    background: url('../imgs/icon-plant-watering.png');
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+}
+
+.title {
+    position: relative;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    margin: 0 auto;
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    color: #643D14;
+}
+
+.decoreter {
+    width: 195px;
+    height: 30px;
+    background: url('../imgs/title-decorator.png');
+
+}
+
+.decoreter-right {
+    background: url('../imgs/tiltle-decorator-2.png')
+}
+
+.decoreter:nth-child(0) {
+    transform: rotate(90deg);
+}
+
+.container {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    padding: 40px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.container:before,
+.container:after {
+    content: '';
+    position: absolute;
+    border: 3px solid #B17151;
+    border-image: linear-gradient(90deg, #A26343, #D2996C, #A26343);
+    border-image-slice: 1;
+}
+
+.container:before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    outline: 11px solid #f0dfa7;
+    z-index: 0;
+}
+
+.container:after {
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    outline: 11px solid #f0dfa7;
+    z-index: -1;
+}
+
+
+body,
+html {
     width: 100vw;
     height: auto;
     background: #F0DFA7;
 }
 
-.container {
-    background: #F0DFA7;
-    width: 100vw;
-    height: 100vh;
-}
 
 .logo {
     position: absolute;
@@ -31,6 +106,14 @@ body, html {
     background-image: url('../imgs/logo.png');
     background-size: cover;
 }
+
+.logo-panama {
+    width: 100px;
+    height: 100px;
+    background-image: url('../imgs/logo.png');
+    background-size: cover;
+}
+
 main {
     display: flex;
     width: 100vw;
@@ -39,7 +122,9 @@ main {
     align-items: center;
     justify-content: center;
     gap: 65px;
+    z-index: 99;
 }
+
 main h1 {
     font-size: 72px;
 }
@@ -48,6 +133,7 @@ main h1 {
     display: flex;
     gap: 16px;
 }
+
 .btn a {
     color: #60100C;
 }
@@ -58,10 +144,10 @@ main h1 {
     font-size: 30px;
     font-family: 'Manrope', sans-serif;
     display: flex;
-    border-radius: 12px;    
+    border-radius: 12px;
     align-items: center;
     justify-content: center;
-    width:  200px;
+    width: 200px;
     height: 100px;
     background: #f0dfa7;
     transition: 400ms all ease-in-out;
@@ -71,7 +157,7 @@ main h1 {
 
 
 .btn-red {
-    color:  #FFF;
+    color: #FFF;
     background: #E63946;
     filter: none;
 }
@@ -86,14 +172,17 @@ header {
     width: 100vw;
     margin-top: 66px;
 }
+
 header nav {
-    width: 90%;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    z-index: 99;
     justify-content: space-between;
 }
+
 header nav ul {
     font-family: 'Montserrat';
     font-weight: 700;
@@ -103,10 +192,12 @@ header nav ul {
     gap: 34px;
     font-size: 24px;
 }
+
 header nav ul li {
     transition: 300ms all ease-in-out;
     cursor: pointer;
 }
+
 header nav ul li:hover {
     color: #B17151;
 }
@@ -117,8 +208,9 @@ header nav ul li::after {
     width: 0%;
     height: 8px;
     background: linear-gradient(89.98deg, #B17151 -0.35%, rgba(196, 117, 41, 0.5) 99.99%);
-        transition: 400ms all ease-in-out;
-} 
+    transition: 400ms all ease-in-out;
+}
+
 header nav ul li:hover::after {
     width: 100%;
 }
@@ -132,9 +224,10 @@ header nav ul li:hover::after {
 header nav .logo-header {
     width: 100px;
     height: 100px;
-    background: url('../imgs/logo.png') ;
+    background: url('../imgs/logo.png');
     background-size: cover;
 }
+
 .auth {
     position: absolute;
     display: none;
@@ -143,9 +236,39 @@ header nav .logo-header {
     margin-top: 0px;
     right: 100px;
 }
+.picture {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #C47529;
+    background: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+}
+.user-menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    right: 150px;
+    background: #F0DFA7;
+    padding: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+}
+.user-menu div h2 {
+    font-family: 'Source Serif 4';
+    display: flex;
+    gap: 20px;
+}
 .auth:hover {
     display: flex;
 }
+
+.profile-picture:hover .user-menu  {
+    display: flex;
+}
+
 .auth div {
     font-family: 'Montserrat';
     font-weight: 700;
@@ -160,6 +283,7 @@ header nav .logo-header {
     height: 68px;
     transition: 400ms all ease-in-out;
 }
+
 .auth div:hover {
     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
 
@@ -167,4 +291,66 @@ header nav .logo-header {
 
 .user:hover .auth {
     display: flex;
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer .email {
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    font-size: 24px;
+    color: #FFF;
+}
+
+
+.social-media{
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    border: 2px solid #C47529;
+    color: #C47529;
+    font-size: 27px;
+    transition: .2s all ease-in-out;
+}
+
+.icons:hover {
+    background-color: #C47529;
+    color: #F0DFA7;
+}
+
+input {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    width: 233px;
+    height: 35px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border: 3px solid #C47529;
+}
+textarea {
+    padding: 10px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    outline: none;
+    background: transparent;
+    border: 3px solid #C47529;
 }

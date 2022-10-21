@@ -1,17 +1,22 @@
 @keyframes arrow-down {
     0% {
         transform: translateY(0px);
-      }
-      50% {
+    }
+
+    50% {
         transform: translateY(50px);
-      }
-      100% {
-          transform: translateY(0px);
-      }
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 
 }
+
 main {
     display: block;
+    width: 100%;
+    height: fit-content;
 }
 
 .hero {
@@ -21,59 +26,35 @@ main {
     justify-content: center;
 }
 
-.title .icon-watering {
-    display: flex;
-    align-items: center;
-    background: url('../imgs/icon-plant-watering.png');
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-}
-.title {
-    position: relative;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    margin: 0 auto;
-    width: 1200px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 56px;
-    color: #643D14;
-}
+
+
+
 .banner {
     margin-top: -120px;
     background: url('../imgs/banner.png');
     width: 287px;
     height: 500px;
 }
+
 .arrow-down {
     transform: translateY(50px);
     position: relative;
-    animation: arrow-down 1.2s infinite  linear;
+    animation: arrow-down 1.2s infinite linear;
     left: 50%;
     background: url('../imgs/arrow-down.png');
     background-repeat: no-repeat;
     width: 50px;
     height: 60px;
 }
+
 .our-history {
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.decoreter {
-    width: 195px;
-    height: 30px;
-    background: url('../imgs/title-decorator.png');
 
-}
-.decoreter-right {
-    background: url('../imgs/tiltle-decorator-2.png')
-}
-.decoreter:nth-child(0) {
-    transform: rotate(90deg);
-}
+
 .title-gradient {
     background: linear-gradient(90.03deg, #B17151 0.03%, rgba(196, 117, 41, 0.5) 99.97%);
     -webkit-background-clip: text;
@@ -83,13 +64,39 @@ main {
 
 .container-content {
     width: 100vw;
-    margin: 0 auto;
     display: flex;
+    gap: 50px;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     justify-content: center;
 }
 
+.container-content .image-scroller {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.container-content .image-scroller .next,
+.last {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #B17151 0%, rgba(196, 117, 41, 0.5) 100%);
+}
+.next i, .last i {
+    background: url('../imgs/triangle.png');
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+}
+.next i {
+    transform: rotate(180deg);
+}
 .container-content .scroller-image {
     width: 470px;
     height: 470px;
@@ -105,4 +112,48 @@ main {
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 16px;
-}   
+}
+.container-content:nth-child(2) h3 {
+    width: 292px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+}
+.container-content:nth-child(2) {
+    flex-direction: row;
+}
+.grid-images {
+    display: flex;
+    gap: 20px;
+}
+.grid-images .sub-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.image, .box {
+    border: 3px solid #C47529;
+}
+.image {
+    width: 264px;
+    height: 320px;
+    background: url('https://images.unsplash.com/photo-1516458464372-eea4ab222b31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box:nth-child(1), .box:nth-child(2) {
+    width: 264px;
+    height: 150px;
+    background: red;
+}
+
+.box:nth-child(1) {
+    background: url('../imgs/work1.png');
+}
+
+.box:nth-child(2) {
+    background: url('../imgs/work2.png');
+}
