@@ -1,0 +1,86 @@
+.container-forum {
+    width: 50%;
+    height: 600px;
+    background: linear-gradient(180deg, #E7A25F 0%, rgba(231, 162, 95, 0.5) 100%);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+}
+.container-forum .utils {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+}
+
+.btn-comment {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 45px;
+}
+.container-forum .utils span h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    margin-left: 45px;
+    color: #FFFFFF;
+}
+
+.wrapper-suggestion {
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 122px;
+    margin-right: 45px;
+    margin-top: 30px;
+}   
+.suggestion .text-content .text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.suggestion {
+    width: 80%;
+    z-index: 99;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+.suggestion .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.suggestion .buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.suggestion .buttons span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+}
+
+.suggestion .buttons span i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.suggestion .buttons span .fa-heart {
+    color: #E63946;
+}
+.suggestion .buttons span .fa-square-share-nodes {
+    color: #367FD4;
+}
